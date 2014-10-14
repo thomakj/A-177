@@ -62,7 +62,7 @@ while 1==1:
 	    signalStrength = var[:(len(var)-1)]
             signalStrength = int(float(signalStrength))
 	    print ("Thomas: " + str(signalStrength))
-            if (signalStrength > signals[2] and signalStrength < -55 and signalStrength > -70):
+            if (signalStrength > signals[2] and signalStrength < -60 and signalStrength > -75):
 	        print "open for Thomas"
                 openDoor = 1
                 #nearby("Thomas")
