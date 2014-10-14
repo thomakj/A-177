@@ -21,7 +21,7 @@ def hello(): # This function responds to a user that inputs "Hello Mybot"
 
 def inOffice():
     #
-    # Lettere a bare lese fra fil når var sist gang personene ble sett
+    # Lettere a bare lese fra fil nar var sist gang personene ble sett
     #
     ircsock.send("PRIVMSG"+ channel +" :Kristian har ikke ordnet funksjonen enda!\n")
 
