@@ -4,7 +4,7 @@ import socket
 # Some basic variables used to configure the bot
 server = "irc.inet.tele.dk" # Server
 channel = "#A-177" # Channel
-botnick = "dumbBot" # Your bots nick
+botnick = "smartBot" # Your bots nick
 
 
 def ping(): # This is our first function! It will respond to server Pings.
@@ -23,7 +23,7 @@ def inOffice():
     #
     # Lettere å bare lese fra fil når var sist gang personene ble sett
     #
-    ircsock.send("PRIVMSG"+ channel +":Kristian har ikke ordnet funksjonen enda!\n")
+    ircsock.send("PRIVMSG"+ channel +" :Kristian har ikke ordnet funksjonen enda!\n")
 
 
 ircsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -41,7 +41,7 @@ while 1: # Be careful with these! it might send you to an infinite loop
     if ircmsg.find(":Hello "+ botnick) != -1: # If we can find "Hello Mybot" it will call the function hello()
         hello()
 
-    if ircmsg.find(":!In") != -1:
+    if ircmsg.find(":In") != -1:
         inOffice()
 
     if ircmsg.find("PING :") != -1: # if the server pings us then we've got to respond!
