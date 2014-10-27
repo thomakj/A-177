@@ -47,7 +47,7 @@ while 1==1:
 	        print "open for Orjan"
                 openDoor = 1
             signals[1] = signalStrength
-       if sudi in line:
+        if sudi in line:
             var = line.split(' ')[5]
 	    signalStrength = var[:(len(var)-1)]
             signalStrength = int(float(signalStrength))
